@@ -15,6 +15,7 @@ In order to control the displayed content in VRMOD, we use several metadata keys
 ### Digital Item
 Special keys:
 - **export** - Only items that have key **export** present and set to value **1** are considered displayable.
+- **result** - Items that have key **result** present and set to **1** are considered main results of the project and displayed at the top, outside of it's groups. They are also displayed in their groups as well.
 
 Common keys that are displayed for each item, if present:
 - **description**
