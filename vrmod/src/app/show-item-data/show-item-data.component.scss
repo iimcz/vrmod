@@ -1,0 +1,21 @@
+.data-cell {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.audio-cell {
+  width: 100%;
+}
+
+.video-cell {
+  @extend .data-cell;
+  object-fit: inherit;
+}
+
+.image-cell {
+  @extend .data-cell;
+  cursor: pointer;
+}

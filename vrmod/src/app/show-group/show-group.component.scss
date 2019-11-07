@@ -1,0 +1,15 @@
+.group-top {
+  width: 100%;
+  //padding-top: 64px;
+}
+
+.group-top-even {
+  @extend .group-top;
+  background-color: #dcdcdc;
+
+}
+
+.group-top-odd {
+  @extend .group-top;
+  background-color: white;
+}

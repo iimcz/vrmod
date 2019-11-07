@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <span><button mat-button [routerLink]="['/home']">VRMOD</button></span>
+  <span style="flex: 1 1 auto;" fxLayout="row">
+    <span fxFlex="33%" fxLayoutAlign="center"><button mat-button [routerLink]="['/about']">O Projektu</button></span>
+
+    <span fxFlex="33%" fxLayoutAlign="center"><button mat-button [routerLink]="['/shows']">Představení</button></span>
+
+    <span fxFlex="33%" fxLayoutAlign="center"><button mat-button [routerLink]="['/contacts']">Kontakty</button></span>
+  </span>
+  <span>
+    <a mat-button [href]="emodUrl">EMOD</a>
+  </span>
+
+</mat-toolbar>
+

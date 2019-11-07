@@ -1,0 +1,32 @@
+<ng-container [ngSwitch]="true">
+  <ng-container *ngSwitchCase="item.mime.startsWith('video/')">
+    <video class="video-cell" controls preload="none" [poster]="previewUrl">
+      <source [src]="dataUrl" [type]="item.mime">
+    </video>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="item.mime.startsWith('audio/')">
+    <audio class="audio-cell" controls >
+      <source [src]="dataUrl" [type]="item.mime">
+    </audio>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="item.mime.startsWith('image/')">
+    <img [src]="previewUrl" class="image-cell" (click)="show_lightbox()">
+  </ng-container>
+
+  <ng-container *ngSwitchCase="item.mime === 'application/pdf'">
+    <a [href]="dataUrl" target="_blank"><img [src]="previewUrl" class="image-cell"></a>
+  </ng-container>
+
+  <!--<ng-container *ngSwitchCase="item.mime === 'motion/bvh'">-->
+    <!-- IMPLEMENT -->
+  <!--</ng-container>-->
+
+  <ng-container *ngSwitchDefault>
+    <a mat-button [href]="dataUrl" target="_blank">Náhled není k dispozici</a>
+  </ng-container>
+
+
+</ng-container>
+

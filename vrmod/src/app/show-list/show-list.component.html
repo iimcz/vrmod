@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="mat-display-4">Představení</h1>
+
+  <ng-container *ngIf="sets && sets.length > 0">
+    <ng-container *ngFor="let dis of sets">
+      <button mat-raised-button [routerLink]="['/show', dis.id_set]">{{get_description(dis)}}</button>
+      <br>
+    </ng-container>
+  </ng-container>
+</div>

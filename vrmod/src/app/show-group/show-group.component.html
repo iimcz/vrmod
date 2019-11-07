@@ -1,0 +1,20 @@
+<div [class.group-top-odd]="oddStart" [class.group-top-even]="!oddStart">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+
+      {{get_description(group)}}
+    </mat-expansion-panel-header>
+    <div style="width: 100%" fxLayout="row">
+      <div fxFlex="100%" fxLayoutAlign="center" class="mat-display-2">{{get_description(group)}}</div>
+    </div>
+
+    <ng-container *ngFor="let item of group.items; index as i">
+
+      <vrmod-show-item [item]="item" [odd]="(i % 2) == (oddStart ? 0 : 1)"></vrmod-show-item>
+      <br>
+
+    </ng-container>
+
+
+  </mat-expansion-panel>
+</div>

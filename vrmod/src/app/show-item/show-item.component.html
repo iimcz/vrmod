@@ -1,0 +1,18 @@
+<table style="width:100%" [class.row-odd]="odd" [class.row-even]="!odd">
+  <tr>
+    <td style="width: 50%" class="data-cell">
+      <ng-container [ngTemplateOutlet]="itemData" *ngIf="odd; else itemMeta"></ng-container>
+    </td>
+    <td style="width: 50%" class="data-cell">
+      <ng-container [ngTemplateOutlet]="itemData" *ngIf="!odd; else itemMeta"></ng-container>
+    </td>
+  </tr>
+</table>
+
+
+<ng-template #itemData>
+  <vrmod-show-item-data [item]="item"></vrmod-show-item-data>
+</ng-template>
+<ng-template #itemMeta>
+  <vrmod-show-item-metadata [metadata]="item.metadata"></vrmod-show-item-metadata>
+</ng-template>

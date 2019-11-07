@@ -1,0 +1,34 @@
+<span *ngIf="dis === null">
+  No show loaded
+</span>
+<div *ngIf="dis !== null" class="container">
+
+
+  <h1 class="mat-display34">{{get_description(dis)}}</h1>
+
+  <vrmod-show-item-metadata [metadata]="dis.metadata"></vrmod-show-item-metadata>
+  <br>
+  <ng-container *ngIf="results.length > 0">
+    <div style="width: 100%" fxLayout="row">
+      <div fxFlex="100%" fxLayoutAlign="center" class="mat-display-2">Výsledky</div>
+    </div>
+  <ng-container *ngFor="let result of results; index as idx">
+    <vrmod-show-item [item]="result" [odd]="!!(idx % 2)"></vrmod-show-item>
+    <br>
+  </ng-container>
+  </ng-container>
+
+  <ng-container *ngFor="let group of dis.groups; index as idx">
+    <vrmod-show-group [group]="group" [oddStart]="groupStartsOdd(idx)"></vrmod-show-group>
+
+  </ng-container>
+
+
+  <mat-expansion-panel [expanded]="false">
+    <mat-expansion-panel-header>Source</mat-expansion-panel-header>
+    <pre>
+      {{dis|json}}
+    </pre>
+  </mat-expansion-panel>
+
+</div>

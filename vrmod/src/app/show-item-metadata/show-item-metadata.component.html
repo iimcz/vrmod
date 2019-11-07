@@ -1,0 +1,18 @@
+<table>
+  <tr *ngFor="let attr of get_attribs()">
+    <th style="vertical-align: top;">{{attr.name}}</th>
+    <td>
+      <ng-container [ngSwitch]="attr.type">
+        <ng-container *ngSwitchCase="'names'">
+        <span *ngFor="let name of attr.value.split(';')">
+          {{name}}<br>
+        </span>
+        </ng-container>
+        <ng-container *ngSwitchDefault>
+          {{attr.value}}
+        </ng-container>
+      </ng-container>
+
+    </td>
+  </tr>
+</table>
