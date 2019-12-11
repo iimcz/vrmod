@@ -1,13 +1,22 @@
-<mat-toolbar>
-  <span><button mat-button [routerLink]="['/home']">VRMOD</button></span>
-  <span style="flex: 1 1 auto;" fxLayout="row">
-    <span fxFlex="33%" fxLayoutAlign="center"><button mat-button [routerLink]="['/about']">O Projektu</button></span>
-
-    <span fxFlex="33%" fxLayoutAlign="center"><button mat-button [routerLink]="['/shows']">Představení</button></span>
-
-    <span fxFlex="33%" fxLayoutAlign="center"><button mat-button [routerLink]="['/contacts']">Kontakty</button></span>
-  </span>
+<mat-toolbar class="menu-bar">
   <span>
+    <button mat-button [routerLink]="['/home']" routerLinkActive="menu-active">VRMOD</button>
+  </span>
+  <span style="flex: 1 1 auto;" fxLayout="row">
+    <span fxFlex="33%" fxLayoutAlign="center">
+      <button mat-button [routerLink]="['/about']" routerLinkActive="menu-active">O Projektu</button>
+    </span>
+
+    <span fxFlex="33%" fxLayoutAlign="center">
+      <button mat-button [routerLink]="['/shows']" routerLinkActive="menu-active"
+              [routerLinkActiveOptions]="{exactMatch: false}">Představení</button>
+    </span>
+
+    <span fxFlex="33%" fxLayoutAlign="center">
+      <button mat-button [routerLink]="['/laternavr']" routerLinkActive="menu-active">LaternaVR</button>
+    </span>
+  </span>
+  <span *ngIf="emodUrl">
     <a mat-button [href]="emodUrl">EMOD</a>
   </span>
 
