@@ -85,7 +85,7 @@ export class ShowInfoComponent implements OnInit, OnDestroy {
 
   private process_items(group: DigitalGroupInterface): void {
     if (group.items !== undefined) {
-      const items = group.items.filter(e => e && e.metadata && Utils.find_meta_key(e.metadata, 'export') === '1');
+      const items = group.items.filter(e => e && e.metadata && Utils.find_meta_key(e.metadata, 'public') === '1');
       group.items = items;
     }
   }
