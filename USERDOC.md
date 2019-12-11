@@ -1,50 +1,65 @@
-# User documentation for VRMOD
+# Uživatelská dokumentace pro VRMOD
 
+Modul VRMOD slouží k zobrazení a zpřístupnění multimediálního obsahu. VRMOD je přístupný přes odkaz v horní liště aplikace EMOD, jejíž instalace je podmínkou pro běh modulu VRMOD. 
 
-VRMOD itself doesn't have any user cofigurable options. The content of the site is determined by data and it's metadata in EMOD.
+VRMOD umožňuje zobrazovat multimediální obsah dokumentující jednotlivá představení ve struktuře definované editorem v aplikaci EMOD a ve formě webové stránky. Dále umožňuje zpřístupnit rekonstukce představení za pomoci interaktivních VR aplikací na PC a na mobilním zařízení. 
 
-There are, however, few metadata keys which, when present, can affect the content. This document describes what data structures in emod are needed and whic metadata keys are used.
+Samotný VRMOD nemá žádné uživatelem konfigurovatelné možnosti. Obsah prezentace je určen údaji a jejich metadaty uloženými v databázi aplikace EMOD. Zde, v aplikaci EMOD, uživatel může nastavovat tzv. metadatové klíče k jednotlivým datovým objektům a ovlivnit tak způsob jejich zobrazování.
 
-## Displayed content
-VRMOD displays *Digital Sets* from EMOD. For each Digital Set, VRMOD displays all *Digital Groups* which has any displayable *Digital Items*.
-*Digital Items* are then displayed based on their type.
-
-## Special Metadata
-In order to control the displayed content in VRMOD, we use several metadata keys.
-
-### Digital Item
-Special keys:
-- **export** - Only items that have key **export** present and set to value **1** are considered displayable.
-- **result** - Items that have key **result** present and set to **1** are considered main results of the project and displayed at the top, outside of it's groups. They are also displayed in their groups as well.
-
-Common keys that are displayed for each item, if present:
-- **description**
-- **topic**
-- **part_name**
-- **name**
-- **subject**
-- **date**
-- **abstract**
-- **place**
-- **publisher**
-- **length**
-
-### Digital group
-Special keys:
-- **order** - if present, it is used for ordering the groups on the site.
-
-Common keys:
-- **description**
-
-### Digital set
-Name of the Set is determined as contens of keys **description** and **part_name** concatenated.
-
-Then the same keys are for Digital Items are displayed.
+Je tedy možné definovat několik metadatových klíčů, které, pokud jsou nastaveny, mohou ovlivnit zobrazovaný obsah. Následující část popisuje, jaké datové struktury v EMOD jsou potřebné a které metadatové klíče jsou použity pro nastavení zobrazování obsahu.
 
 
 
+## Zobrazený obsah
+VRMOD zobrazuje **Datové Sady** (DS je hierarchický strom dat představující jedno číslo nebo představení), jehož data jsou uložena v databázi EMOD. VRMOD zobrazuje pro každou datovou sadu všechny **Skupiny Digitálních Objektů** (GDO je skupina fotografií nebo videí souvisejících s podobným tématem), které jsou sestaveny z tzv. **Digitálních Objektů** (DO je každý mediální soubor představující obrázek, video, sled pohybových dat atd.). Digitální objekty se poté zobrazují podle typu (text, video, zvuk, obrázek, atd.).
+
+## Speciální metadata
+K ovládání zobrazeného obsahu ve VRMOD lze použít několik metadatových klíčů. Každý klíč má název a hodnotu. Hodnotou může být text nebo číslo, případně jedna z hodnot 0, 1 označujících významy “nenastaveno”, “nastaveno”.
 
 
+### Digitální objekty
+U každého digitálního objektu (text, video, zvuk, obrázek, atd.) lze nastavit následující klíče.
+
+Speciální klíče:
+
+- **public** - Za zobrazitelné se považují pouze položky, které mají definovaný klíč export nastavený na hodnotu 1.
+- **result** - Položky, které mají tento klíč definovaný a nastavený na hodnotu 1, jsou považovány za hlavní výsledky projektu a zobrazeny nahoře, mimo jeho skupiny. Jsou také zobrazeny ve svých skupinách.
+
+Obecné klíče, které se zobrazují pro každou položku, jsou-li nastaveny:
+
+- **description** - název představení
+- **topic** - popis tématu představení
+- **part_name** - název zdokumentované části představení
+- **name** - seznam autorů a jejich rolí (Jan Novák, choreograf; Jana Novák, režisér)
+- **subject** - seznam účinkujících (Jan Novák, tanečník; Jana Novák, tanečník)
+- **date** - datum realizace
+- **abstract** - krátký text komentující obsah dat
+- **place** - místo realizace
+- **publisher** - instituce jako realizátor představení
+- **length** - délka představení
 
 
+### Skupina Datových Objektů
+Vytvořená skupina datových objektů může mít definované následující metadatové klíče.
+
+Speciální klíče:
+
+- **order** - pokud je definováno, používá se pro řazení skupin DO na webu.
+
+Společné klíče:
+
+- **description** - název představení
+
+### Datová Sada
+Název Datové Sady je určen jako obsah klíče **description** zřetězeného s obsahem klíče **part_name**.
+
+Stejné klíče jako u datových objektů se zobrazí v horní části prezentační stránky pro Datovou Sadu.
+
+## LaternaVR
+
+Součástí prezentačního rozhraní VRMOD je prezentace rekonstruovaných částí představení v prostředí virtuální reality. LaternaVR umožňuje dvě formy prezentace: varianta pro PC a varianta pro mobilní telefon s OS Android. Obě varianty jsou dostupné v sekci LaternaVR přes stejnojmenný odkaz v horní liště modulu VRMOD. Mobilní aplikace LaternaVR je pak dostupná přes odkaz na službu GooglePlay v sekci LaternaVR. V této sekci jsou dostupné i odkazy ke stažení spustitelných PC verzí pro jednotlivá představení.
+
+Po spuštení PC verze se zobrazí VR model scény s hledištěm a na jevišti se spustí příslušné představení. Uživatel si scénu může procházet na monitoru pomocí šipek na klávesnici nebo pomocí náhlavní VR soupravy příslušných ovladačů. V současnosti je tato verze přeložena pro soupravu HTC VIVE. Mobilní verze nabídne uživateli seznam představení a po výběru některého z nich se spustí příslušná prezentace. Uživatel si může vybrat zda scénu bude procházet v náhledu s jedním pohledem (podobně jako u PC verze na monitoru) nebo ve stereoskopické verzi pro brýle - tzv. CARDBOARD, které představují zjednodušenou variantu PC verze s náhlavní VR soupravou. Změna pozice uživatele ve scéně se pak realizuje zaměřením kurzoru, který je vidět v pohledu, na cílové místo po dobu několika sekund. Aplikace po té změní uživatelovu pozici.
+
+Pozn. Veškerý obsah prezentovaný a zpřístupňovaný pomocí aplikace EMOD, modulu VRMOD nebo aplikací LaternaVR podléhá licenčním podmínkám, které určuje provozovatel aplikace. Proto pro přístup k obsahu je vyžadována autentikace.
 
