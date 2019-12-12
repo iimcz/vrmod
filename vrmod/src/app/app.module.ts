@@ -21,6 +21,7 @@ import {ShowItemComponent} from './show-item/show-item.component';
 import {ShowItemMetadataComponent} from './show-item-metadata/show-item-metadata.component';
 import {ShowItemDataComponent} from './show-item-data/show-item-data.component';
 import {LightboxModule} from 'ngx-lightbox';
+import { ShowMotionItemComponent } from './show-motion-item/show-motion-item.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {LightboxModule} from 'ngx-lightbox';
     ShowGroupComponent,
     ShowItemComponent,
     ShowItemMetadataComponent,
-    ShowItemDataComponent
+    ShowItemDataComponent,
+    ShowMotionItemComponent
   ],
   imports: [
     BrowserModule,
