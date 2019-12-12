@@ -31,7 +31,11 @@
               "src/styles.scss",
               "./node_modules/ngx-lightbox/lightbox.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/three/build/three.min.js",
+              "./node_modules/three/examples/js/controls/OrbitControls.js",
+              "./node_modules/three/examples/js/loaders/BVHLoader.js"
+            ]
           },
           "configurations": {
             "production": {
