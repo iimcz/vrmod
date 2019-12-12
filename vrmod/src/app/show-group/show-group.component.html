@@ -2,10 +2,10 @@
   <mat-expansion-panel>
     <mat-expansion-panel-header>
 
-      {{get_description(group)}}
+      {{get_description(group, false)}}
     </mat-expansion-panel-header>
     <div style="width: 100%" fxLayout="row">
-      <div fxFlex="100%" fxLayoutAlign="center" class="mat-display-2">{{get_description(group)}}</div>
+      <div fxFlex="100%" fxLayoutAlign="center" class="mat-display-2">{{get_description(group, false)}}</div>
     </div>
 
     <ng-container *ngFor="let item of group.items; index as i">

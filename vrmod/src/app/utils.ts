@@ -17,10 +17,9 @@ export class Utils {
     }
     return null;
   }
-
-
-  static get_description(dis: DigitalSetInterface | DigitalGroupInterface | DigitalItemInterface): string {
-    const name = [Utils.find_meta_key(dis.metadata, 'description'), Utils.find_meta_key(dis.metadata, 'part_name')]
+  
+  static get_description(dis: DigitalSetInterface | DigitalGroupInterface | DigitalItemInterface, usePartName = true): string {
+    const name = [Utils.find_meta_key(dis.metadata, 'description'), usePartName ? Utils.find_meta_key(dis.metadata, 'part_name') : null]
       .filter(e => e).join(' - ');
     return name || dis.description || '';
   }
