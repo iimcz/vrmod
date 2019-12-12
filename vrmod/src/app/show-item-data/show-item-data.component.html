@@ -19,9 +19,9 @@
     <a [href]="dataUrl" target="_blank"><img [src]="previewUrl" class="image-cell"></a>
   </ng-container>
 
-  <!--<ng-container *ngSwitchCase="item.mime === 'motion/bvh'">-->
-    <!-- IMPLEMENT -->
-  <!--</ng-container>-->
+  <ng-container *ngSwitchCase="item.mime === 'motion/bvh'">
+    <vrmod-show-motion-item [url]="dataUrl"></vrmod-show-motion-item>
+  </ng-container>
 
   <ng-container *ngSwitchDefault>
     <a mat-button [href]="dataUrl" target="_blank">Náhled není k dispozici</a>
