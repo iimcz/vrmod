@@ -4,6 +4,8 @@ Modul VRMOD slouží k zobrazení a zpřístupnění multimediálního obsahu. V
 
 VRMOD umožňuje zobrazovat multimediální obsah dokumentující jednotlivá představení ve struktuře definované editorem v aplikaci EMOD a ve formě webové stránky. Dále umožňuje zpřístupnit rekonstukce představení za pomoci interaktivních VR aplikací na PC a na mobilním zařízení. 
 
+![VRMOD Screenshot][VRMODSC1]
+
 Samotný VRMOD nemá žádné uživatelem konfigurovatelné možnosti. Obsah prezentace je určen údaji a jejich metadaty uloženými v databázi aplikace EMOD. Zde, v aplikaci EMOD, uživatel může nastavovat tzv. metadatové klíče k jednotlivým digitálním objektům a ovlivnit tak způsob jejich zobrazování.
 
 Je tedy možné definovat několik metadatových klíčů, které, pokud jsou nastaveny, mohou ovlivnit zobrazovaný obsah. Následující část popisuje, jaké datové struktury v EMOD jsou potřebné a které metadatové klíče jsou použity pro nastavení zobrazování obsahu.
@@ -63,3 +65,5 @@ Po spuštení PC verze se zobrazí VR model scény s hledištěm a na jevišti s
 
 Pozn. Veškerý obsah prezentovaný a zpřístupňovaný pomocí aplikace EMOD, modulu VRMOD nebo aplikací LaternaVR podléhá licenčním podmínkám, které určuje provozovatel aplikace. Proto pro přístup k obsahu je vyžadována autentikace.
 
+
+[VRMODSC1]: /vrmod/src/assets/vrmod_screeshot.jpg
