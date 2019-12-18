@@ -16,9 +16,9 @@
 
 ***
 
-Modul VRMOD slouží k zobrazení a zpřístupnění multimediálního obsahu. VRMOD je přístupný přes odkaz v horní liště aplikace [EMOD](https://github.com/iimcz/emod/blob/master/frontend/lm-naki/doc/DOC.md), jejíž instalace je podmínkou pro běh modulu VRMOD. 
+Modul VRMOD slouží k zobrazení a zpřístupnění multimediálního obsahu spravovan0ho prostřednictvím aplikace [EMOD](https://github.com/iimcz/emod/blob/master/frontend/lm-naki/doc/DOC.md) (jejíž instalace je podmínkou pro běh modulu VRMOD). Z této aplikace je VRMOD přístupný přes odkaz v horní liště. 
 
-VRMOD umožňuje zobrazovat multimediální obsah dokumentující jednotlivá představení ve struktuře definované editorem v aplikaci EMOD a ve formě webové stránky. Dále umožňuje zpřístupnit rekonstukce představení za pomoci interaktivních VR aplikací na PC a na mobilním zařízení. 
+VRMOD umožňuje zobrazovat multimediální obsah dokumentující jednotlivá představení ve struktuře definované editorem v aplikaci EMOD ve formě webové stránky. Dále umožňuje zpřístupnit rekonstukce představení za pomoci interaktivních VR aplikací na PC a na mobilním zařízení. 
 
 ![VRMOD Screenshot][VRMODSC1]
 
