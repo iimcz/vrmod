@@ -10,8 +10,6 @@ Samotný VRMOD nemá žádné uživatelem konfigurovatelné možnosti. Obsah pre
 
 Je tedy možné definovat několik metadatových klíčů, které, pokud jsou nastaveny, mohou ovlivnit zobrazovaný obsah. Následující část popisuje, jaké datové struktury v EMOD jsou potřebné a které metadatové klíče jsou použity pro nastavení zobrazování obsahu.
 
-
-
 ## Zobrazený obsah
 VRMOD zobrazuje **Datové Sady** (_Data Set - DS_ je hierarchický strom dat představující jedno číslo nebo představení), jehož data jsou uložena v databázi EMOD (viz také [dokumentace EMOD](https://github.com/iimcz/emod/blob/master/frontend/lm-naki/doc/DOC.md#struktura-ulo%C5%BEen%C3%BDch-dat)). VRMOD zobrazuje pro každou datovou sadu všechny **Skupiny Digitálních Objektů** (_Group of Digital Items - GDI_ je skupina fotografií nebo videí souvisejících s podobným tématem), které jsou sestaveny z tzv. **Digitálních Objektů** (_Digital Item - DI_ je každý mediální soubor představující obrázek, video, sled pohybových dat atd.). Digitální objekty se poté zobrazují způsobem podle typu (text, video, zvuk, obrázek, atd.). 
 
@@ -22,12 +20,15 @@ K ovládání zobrazeného obsahu ve VRMOD lze použít několik metadatových k
 ### Digitální objekty
 U každého digitálního objektu (text, video, zvuk, obrázek, atd.) lze nastavit následující klíče.
 
-Speciální klíče:
+#### Speciální klíče
 
-- **public** - Za zobrazitelné se považují pouze položky, které mají definovaný klíč export nastavený na hodnotu 1.
+- **public** - Za zobrazitelné se považují pouze položky, které mají definovaný klíč export nastavený na hodnotu 1. 
+Nastavit hodnotu klíče **public**, a tím zpřístunit digitální objekt v rámci webové prezentace VRMOD, lze i zakliknutím checkboxu na levé straně položky zobrazující tento digitální objekt v seznamu DI v aplikaci EMOD. V EMODu menu vlevo nahoře - položka _Digital Items_ - nalevo příslušné položky v seznamu - pravý checkbox.
 - **result** - Položky, které mají tento klíč definovaný a nastavený na hodnotu 1, jsou považovány za hlavní výsledky projektu a zobrazeny nahoře, mimo jeho skupiny. Jsou také zobrazeny ve svých skupinách.
 
-Obecné klíče, které se zobrazují pro každou položku, jsou-li nastaveny:
+#### Obecné klíče
+
+Jedná se o klíče, které se zobrazují pro každou položku, jsou-li nastaveny:
 
 - **description** - název představení
 - **topic** - popis tématu představení
