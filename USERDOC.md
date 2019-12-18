@@ -65,5 +65,8 @@ Po spuštení PC verze se zobrazí VR model scény s hledištěm a na jevišti s
 
 Pozn. Veškerý obsah prezentovaný a zpřístupňovaný pomocí aplikace EMOD, modulu VRMOD nebo aplikací LaternaVR podléhá licenčním podmínkám, které určuje provozovatel aplikace. Proto pro přístup k obsahu je vyžadována autentikace.
 
+***
+© 2019 ČVUT FEL, Katedra počítačové grafiky a interakce
+
 
 [VRMODSC1]: /vrmod/src/assets/vrmod_screeshot.jpg
