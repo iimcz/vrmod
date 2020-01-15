@@ -16,7 +16,7 @@ Ke kompilaci kódu hry (C++) Unreal potřebuje instalaci vývojového prostřed�
 Aby bylo možné instalaci Visual Studia s Unrealem použít, musí být při instalaci (nebo dodatečně) zvolen k
 instalaci balíček “Game development with C++.”
 
-![Instalace Visual Studia](img/image1.png)
+![Instalace Visual Studia](img/image5.png)
 
 ### Android SDK
 
@@ -54,7 +54,7 @@ Cesta k nastavení je z horního menu následující:
 
 `Edit -> Project Settings... -> vlevo sekce Android SDK`
 
-![Unreal Android SDK Settings](img/image2.png)
+![Unreal Android SDK Settings](img/image3.png)
 
 Zvýrazněná nastavení je nutné vyplnit, API Level lze nechat na posledním (latest). Pokud je k získání Android SDK použito
 Android Studio, je možné použít v něm obsaženou instalaci Javy. Alternativně je nutné Javu nainstalovat zvlášť.
@@ -74,7 +74,7 @@ Následně by sestavená aplikace měla se měla normálně spustit.
 
 Aby bylo možné výsledný .apk soubor nahrát na Google Play jako novou verzi, musí být zvýšeno číslo Store Version v nastavení projektu.
 
-![Unreal Settings - Android Store Version](img/image3.png)
+![Unreal Settings - Android Store Version](img/image10.png)
 
 Musí být také správně nastaveno podepisování balíčku (již by mělo být, nicméně pro úplnost).
 
@@ -105,42 +105,42 @@ AndroidDLCServer="service.iim.cz"
 Před sestavením je nejprve třeba zkontrolovat, že je balení projektu nastavené na distribuční. Nastavení se nachází
 ve stejném okně, jako nastavení Android SDK.
 
-![Unreal packaging settings](img/image5.png)
+![Unreal packaging settings](img/image1.png)
 
 Dalším krokem je vytvoření konfigurací pro sestavení projektu ve více částech (hlavní aplikace a stažitelný obsah).
 V nabídce `Launch (šipka vedle) -> Project Launcher…`
 
-![Unreal top toolbar](img/image6.png)
+![Unreal top toolbar](img/image7.png)
 
-![Unreal Launch options](img/image7.png)
+![Unreal Launch options](img/image11.png)
 
 Je sekce Custom Launch Profiles, kde je v nabídce šipky
 (vedle plus, v záhlaví sekce) možnost `Minimal Android APK + DLC`.
 
-![Unreal ProjectLauncher](img/image8.png)
+![Unreal ProjectLauncher](img/image2.png)
 
 V následujícím okně je nejprve třeba zvolit, kam má být výsledná aplikace a obsah uložen (ideálně prázdná složka).
 Na další obrazovce je pak volba map, které mají být obsaženy v aplikaci. Jediná obsažená mapa by měla být “Launcher,” která
 obsahuje menu pro stažení a spuštění dalšího obsahu. Volba “Build Configuration” by měla být nastavena na “Shipping”
 pro distribuci (Google Play Store), alternativně Development, pokud jde jen o vývojové sestavení.
 
-![Unreal APK/DLC setup](img/image9.png)
+![Unreal APK/DLC setup](img/image13.png)
 
 V další části dialogu je třeba zvolit alespoň jeden formát textur (alespoň Android_ETC1) a právě jednu mapu s představením.
 Další představení je pak možné nastavit v profilu po jeho vytvoření, místo toho zvoleného zde.
 
-![Unreal DLC texture/map settings](img/image10.png)
+![Unreal DLC texture/map settings](img/image6.png)
 
 Pokud se jedná o sestavení aplikace, které má být nahráno na Google Play Store, musí být jak pro APK, tak pro DLC, profil upraven (ikona klíče a šroubováku).
 V sekci `Release / DLC / Patching Settings` musí být zaškrtnuta volba “Create a release version of the game for distribution.”
 
-![Unreal launch profile distribution settings](img/image11.png)
+![Unreal launch profile distribution settings](img/image8.png)
 
 Po vytvoření a nastavení profilů se jejich spuštěním rozběhne sestavení aplikace a DLC.
 Je důležité nejdříve spustit profil pro APK aplikace, až potom jednotlivá DLC.
 Pro sestavení více DLC stačí otevřít nastavení stávajícího DLC profilu a v sekci `Cook -> Cooked Maps` nechat samotnou zvolenou jinou mapu (mapu s jiným představením).
 
-![Unreal project launcher](img/image12.png)
+![Unreal project launcher](img/image9.png)
 
 Výsledná aplikace po sestavení je uvnitř podsložky App složky, který byla zvolena k umístění výsledných souborů.
 V podsložce HTTPChunks se pak nachází sestavené DLC.
@@ -192,7 +192,7 @@ Pro nahrání nové verze aplikace na Google Play je třeba:
   - Kliknout na Spravovat (Manage) u příslušného kanálu (produkční/otevřená beta pro veřejná vydání, uzavřená alfa nebo interní test pro neveřejná vydání)
   - Kliknout na tlačítko Vytvořit vydání (Create release) a vyplnit formulář (včetně nahrání nového APK aplikace)
 
-![Google Play Store release](img/image13.png)
+![Google Play Store release](img/image12.png)
 
 ## Server se statickým obsahem
 
