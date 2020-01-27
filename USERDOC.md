@@ -83,7 +83,14 @@ Po spuštení PC verze se zobrazí VR model scény s hledištěm a na jevišti s
 
 ### Mobilní verze 
 
-Mobilní verze nabídne uživateli seznam představení a po výběru některého z nich se spustí příslušná prezentace. Uživatel si může vybrat zda scénu bude procházet v náhledu s jedním pohledem (podobně jako u PC verze na monitoru) nebo ve stereoskopické verzi pro brýle - tzv. CARDBOARD, které představují zjednodušenou variantu PC verze s náhlavní VR soupravou. Změna pozice uživatele ve scéně se pak realizuje zaměřením kurzoru, který je vidět v pohledu, na cílové místo po dobu několika sekund. Aplikace po té změní uživatelovu pozici.
+Mobilní aplikaci LaternaVR lze vyhledat pomocí služby GooglePlay na mobilním zařízení s operačním systémem Android. Vzhledem k nadstandardním požadavkům na výkon a paměťovým nárokům je aplikace zobrazena jen uživatelům s odpovídajícím zařízením. 
+
+Po spuštění je uživatel vyzván k zadání hesla a následně jsou mu zpřístupněny rekonstrukce jednotlivých tanečních čísel. Data těchto představení si aplikace stahuje na telefon až po jejím zvolení. Pro tato data je potřeba úložiště o velikosti přibližně 200MB. Rychlost spouštění představení závisí na konkrétním připojení k internetu.
+
+Po výběru představení je uživatel vyzván, aby potvrdil stažení dat k představení. Následně po stažení, které může trvat několik minut, je zobrazeno tlačítko spustit a volba "Virtuální realita". Nezatržením této volby je zvolen celoobrazovkový režim prezentace a naopak zatržením je zvolen stereoskopický režim pro CARDBOARD. Po spuštění prezentace má uživatel k dispozici ovládání, které se pro oba režimy liší. V celoobrazovkovém režimu se představení spustí automaticky a zobrazí se dva ovládací prvky ve funkci joystiků. Levý pro pohyb vpřed, vzad, vlevo a vpravo. Pravý pro pohyb nahoru, dolů, otáčení vlevo a vpravo. Představení lze opustit standardním tlačítkem "zpět" mobilního zařízení.
+
+V režimu CARDBOARD má uživatel k dispozici malý kurzor (malý bílý bod) jehož nasměrováním a podržením na místě po dobu cca 1s se spustí akce. Pro spuštění představení je potřeba kurzor namířit na ikonu klapky umístěnou v nadhledu a podržením kurzoru na místě. Namířením na ikonu běžící postavy, která je umístěna rovněž v nadhledu lze zapnout režim teleportace. Kurzor se promění v malou ikonu postavy a jejím namířením na příslušné místo ve scéně a podržením je uživatel přemístěn na toto místo. Představení lze opustit standardním tlačítkem "zpět" mobilního zařízení.
+
 
 Pozn. Veškerý obsah prezentovaný a zpřístupňovaný pomocí aplikace EMOD, modulu VRMOD nebo aplikací LaternaVR podléhá licenčním podmínkám, které určuje provozovatel aplikace. Proto pro přístup k obsahu je vyžadována autentikace.
 
