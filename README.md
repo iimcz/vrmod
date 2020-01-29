@@ -3,6 +3,9 @@
 This file contains documentation for installation and testing of VRMOD.
 For usage instructions, please refer to [user documentation](/USERDOC.md)
 
+For instructions on building/manipulating the Android version of the
+scene viewer project, please refer to [the Unreal-Android.md file](doc/Unreal-Android.md).
+
 ## Instalation
 ### Requirements
 - nodejs, version 10 or higher.
