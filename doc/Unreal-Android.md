@@ -200,7 +200,7 @@ Poskytnutý skript na sestavení aplikace a DLC již tvoří příslušnou struk
 kde jsou ostatní data uložena, pokud jejich umístění souhlasí s cestou uvedenou v souboru dlclist.json.
 
 Formát souboru `dlclist.json`:
-```json
+```
 {
   "items": 
   [
