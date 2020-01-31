@@ -79,11 +79,11 @@ Součástí prezentačního rozhraní VRMOD je prezentace rekonstruovaných čá
 
 ### Verze pro PC
 
-Po spuštení PC verze se zobrazí VR model scény s hledištěm a na jevišti se spustí příslušné představení. Uživatel si scénu může procházet na monitoru pomocí šipek na klávesnici nebo pomocí náhlavní VR soupravy příslušných ovladačů. V současnosti je tato verze přeložena pro soupravu HTC VIVE. 
+Verze pro PC vyžaduje připojení náhlavní soupravy, která je podporovaná platformou SteamVR (např. HTC VIVE). Jednotlivá představení lze stáhnout přes příslušný odkaz v sekci LaternaVR. Po stažení ZIP archivu a jeho rozbalení je vytvořen adresář s názvem balíčku. V něm je pak možné nalézt spustitelný soubor Laterna.exe. Po spuštení PC verze se zobrazí VR model scény s hledištěm a na jevišti se spustí příslušné představení. Uživatel si scénu může procházet pomocí náhlavní VR soupravy a příslušných ovladačů. 
 
 ### Mobilní verze 
 
-Mobilní aplikaci LaternaVR lze vyhledat pomocí služby GooglePlay na mobilním zařízení s operačním systémem Android. Vzhledem k nadstandardním požadavkům na výkon a paměťovým nárokům je aplikace zobrazena jen uživatelům s odpovídajícím zařízením. 
+Mobilní aplikaci LaternaVR lze vyhledat pomocí služby [GooglePlay](https://play.google.com/store/apps/details?id=cz.iim.laternamagika.LaternaVR) na mobilním zařízení s operačním systémem Android. Vzhledem k nadstandardním požadavkům na výkon a paměťovým nárokům je aplikace zobrazena jen uživatelům s odpovídajícím zařízením. 
 
 Po spuštění je uživatel vyzván k zadání hesla a následně jsou mu zpřístupněny rekonstrukce jednotlivých tanečních čísel. Data těchto představení si aplikace stahuje na telefon až po jejím zvolení. Pro tato data je potřeba úložiště o velikosti přibližně 200MB. Rychlost spouštění představení závisí na konkrétním připojení k internetu.
 
